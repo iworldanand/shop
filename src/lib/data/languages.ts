@@ -1,0 +1,66 @@
+export interface Language {
+  code: string;
+  name: string;
+  native: string;
+  rtl?: boolean;
+  indic?: boolean;
+}
+
+export const LANGUAGES: Language[] = [
+  { code: "auto", name: "Auto-detect", native: "Auto" },
+  { code: "en", name: "English", native: "English" },
+  { code: "ta", name: "Tamil", native: "தமிழ்", indic: true },
+  { code: "hi", name: "Hindi", native: "हिन्दी", indic: true },
+  { code: "te", name: "Telugu", native: "తెలుగు", indic: true },
+  { code: "ml", name: "Malayalam", native: "മലയാളം", indic: true },
+  { code: "kn", name: "Kannada", native: "ಕನ್ನಡ", indic: true },
+  { code: "bn", name: "Bengali", native: "বাংলা", indic: true },
+  { code: "gu", name: "Gujarati", native: "ગુજરાતી", indic: true },
+  { code: "mr", name: "Marathi", native: "मराठी", indic: true },
+  { code: "pa", name: "Punjabi", native: "ਪੰਜਾਬੀ", indic: true },
+  { code: "ur", name: "Urdu", native: "اردو", rtl: true },
+  { code: "ar", name: "Arabic", native: "العربية", rtl: true },
+  { code: "es", name: "Spanish", native: "Español" },
+  { code: "pt", name: "Portuguese", native: "Português" },
+  { code: "fr", name: "French", native: "Français" },
+  { code: "de", name: "German", native: "Deutsch" },
+  { code: "it", name: "Italian", native: "Italiano" },
+  { code: "nl", name: "Dutch", native: "Nederlands" },
+  { code: "ru", name: "Russian", native: "Русский" },
+  { code: "uk", name: "Ukrainian", native: "Українська" },
+  { code: "pl", name: "Polish", native: "Polski" },
+  { code: "tr", name: "Turkish", native: "Türkçe" },
+  { code: "id", name: "Indonesian", native: "Bahasa Indonesia" },
+  { code: "ms", name: "Malay", native: "Bahasa Melayu" },
+  { code: "th", name: "Thai", native: "ไทย" },
+  { code: "vi", name: "Vietnamese", native: "Tiếng Việt" },
+  { code: "ja", name: "Japanese", native: "日本語" },
+  { code: "ko", name: "Korean", native: "한국어" },
+  { code: "zh", name: "Chinese", native: "中文" },
+  { code: "zh-TW", name: "Chinese (Traditional)", native: "繁體中文" },
+  { code: "fil", name: "Filipino", native: "Filipino" },
+  { code: "sw", name: "Swahili", native: "Kiswahili" },
+  { code: "he", name: "Hebrew", native: "עברית", rtl: true },
+  { code: "fa", name: "Persian", native: "فارسی", rtl: true },
+  { code: "el", name: "Greek", native: "Ελληνικά" },
+  { code: "cs", name: "Czech", native: "Čeština" },
+  { code: "sv", name: "Swedish", native: "Svenska" },
+  { code: "da", name: "Danish", native: "Dansk" },
+  { code: "fi", name: "Finnish", native: "Suomi" },
+  { code: "no", name: "Norwegian", native: "Norsk" },
+  { code: "hu", name: "Hungarian", native: "Magyar" },
+  { code: "ro", name: "Romanian", native: "Română" },
+  { code: "bg", name: "Bulgarian", native: "Български" },
+  { code: "hr", name: "Croatian", native: "Hrvatski" },
+  { code: "sk", name: "Slovak", native: "Slovenčina" },
+  { code: "sr", name: "Serbian", native: "Српски" },
+  { code: "ca", name: "Catalan", native: "Català" },
+  { code: "af", name: "Afrikaans", native: "Afrikaans" },
+  { code: "sq", name: "Albanian", native: "Shqip" },
+  { code: "az", name: "Azerbaijani", native: "Azərbaycan" },
+  { code: "et", name: "Estonian", native: "Eesti" },
+  { code: "lv", name: "Latvian", native: "Latviešu" },
+  { code: "lt", name: "Lithuanian", native: "Lietuvių" },
+];
+
+export const LANGUAGE_MAP = Object.fromEntries(LANGUAGES.map((l) => [l.code, l]));

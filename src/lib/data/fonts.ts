@@ -1,0 +1,26 @@
+// 100+ Google Fonts available in the caption editor & customize drawer.
+// Indic-script and monospace families are included for regional/tech styles.
+export const GOOGLE_FONTS: string[] = [
+  "Inter", "Roboto", "Open Sans", "Montserrat", "Poppins", "Lato", "Oswald",
+  "Raleway", "Nunito", "Merriweather", "Playfair Display", "Rubik", "Work Sans",
+  "Manrope", "DM Sans", "Space Grotesk", "Sora", "Outfit", "Plus Jakarta Sans",
+  "Figtree", "Lexend", "Archivo", "Anton", "Bebas Neue", "Barlow", "Kanit",
+  "Teko", "Fjalla One", "Josefin Sans", "Quicksand", "Comfortaa", "Baloo 2",
+  "Fredoka", "Pacifico", "Lobster", "Caveat", "Dancing Script", "Permanent Marker",
+  "Bangers", "Luckiest Guy", "Righteous", "Passion One", "Alfa Slab One",
+  "Archivo Black", "Titan One", "Chivo", "Cabin", "Karla", "Mulish", "Overpass",
+  "PT Sans", "PT Serif", "Source Sans 3", "Source Serif 4", "Libre Franklin",
+  "Libre Baskerville", "Crimson Text", "Lora", "Bitter", "Arvo", "Domine",
+  "Zilla Slab", "Cormorant Garamond", "EB Garamond", "Spectral", "Vollkorn",
+  "Frank Ruhl Libre", "Noto Sans", "Noto Serif", "Noto Sans Tamil",
+  "Noto Serif Tamil", "Noto Sans Devanagari", "Noto Serif Devanagari",
+  "Noto Sans Telugu", "Noto Sans Malayalam", "Noto Sans Kannada",
+  "Noto Sans Bengali", "Noto Sans Gujarati", "Noto Sans Arabic",
+  "Hind", "Hind Madurai", "Hind Siliguri", "Mukta", "Mukta Malar",
+  "Baloo Thambi 2", "Baloo Tammudu 2", "Baloo Chettan 2", "Tiro Tamil",
+  "JetBrains Mono", "Fira Code", "Roboto Mono", "IBM Plex Mono", "Space Mono",
+  "Inconsolata", "Source Code Pro", "Ubuntu", "Ubuntu Mono", "Nunito Sans",
+  "Cairo", "Tajawal", "Almarai", "Georgia", "Syne", "Unbounded", "Clash Display",
+  "Satoshi", "General Sans", "Red Hat Display", "Epilogue", "Urbanist",
+  "Schibsted Grotesk", "Instrument Sans", "Onest", "Geist", "Hanken Grotesk",
+];

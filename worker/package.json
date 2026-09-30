@@ -1,0 +1,16 @@
+{
+  "name": "captionforge-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "FFmpeg render worker for CaptionForge",
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+    /* Premium light theme — near-white canvas, ink foreground */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+
+    /* Electric indigo / violet accent, used sparingly */
+    --primary: 255 92% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 255 92% 66%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 255 92% 66%;
+
+    --radius: 0.85rem;
+  }
+
+  .dark {
+    /* Premium black theme */
+    --background: 240 10% 3.5%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 9% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 5%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 255 92% 70%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 240 5% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 12%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 255 92% 70%;
+    --accent-foreground: 240 10% 4%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 14%;
+    --input: 240 5% 16%;
+    --ring: 255 92% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    @apply bg-primary/25;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply border border-white/10 bg-white/60 backdrop-blur-xl dark:bg-white/5;
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.14),
+      0 8px 40px -12px rgba(0, 0, 0, 0.25);
+  }
+  .glass-strong {
+    @apply border border-white/15 bg-white/80 backdrop-blur-2xl dark:bg-white/[0.07];
+  }
+  .text-gradient {
+    @apply bg-gradient-to-br from-foreground via-foreground to-foreground/50 bg-clip-text text-transparent;
+  }
+  .accent-gradient {
+    background-image: linear-gradient(
+      135deg,
+      hsl(255 92% 70%),
+      hsl(270 90% 62%),
+      hsl(230 90% 62%)
+    );
+  }
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+/* Custom scrollbars */
+.scrollbar-thin::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-muted-foreground/25;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Aurora background used on marketing + auth */
+.aurora {
+  background:
+    radial-gradient(40% 40% at 20% 20%, hsl(255 92% 66% / 0.18), transparent 70%),
+    radial-gradient(40% 40% at 80% 10%, hsl(280 92% 60% / 0.16), transparent 70%),
+    radial-gradient(50% 50% at 70% 80%, hsl(225 92% 60% / 0.14), transparent 70%);
+}
